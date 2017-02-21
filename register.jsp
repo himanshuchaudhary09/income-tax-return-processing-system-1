@@ -25,18 +25,8 @@
                     return false;                    
                 }
                 
-                var dob = document.getElementById('txtdob');
-                if(dob.value.trim() == ""){
-                    alert('Please enter your date of birth.');
-                    dob.focus();
-                    return false;                    
-                }
-                var gender = document.getElementById('cmbgender');
-                if(gender.value.trim() == "na"){
-                    alert('Please select your gender.');
-                    gender.focus();
-                    return false;                    
-                }
+             
+               
                 var email = document.getElementById('txtemail');
                 if(email.value.trim() == "" ){
                     alert('Please enter your email id.');
@@ -93,7 +83,7 @@
     <body>
         <table  cellspacing="0" cellpadding="0" align="center" border="0" class="body_content">          
 
-            <%@include file="header.html" %>
+            <%@include file="header.html" %> //including header.html file
             <tr>
                 <td width="950"  height="500" valign="top" style="padding-left: 10px;padding-right: 10px;">
                     <table style="padding-left: 10px;" cellpadding="5" cellspacing="0" width="100%">
@@ -161,16 +151,7 @@
                                             </td>                                            
                                         </tr>
 
-                                        <tr>
-                                            <td width="20%" valign="top">
-                                                <b>Location:</b>
-                                            </td>
-                                            <td>
-                                                <input type="text" class="inputbox" name="txtlocation" id="txtlocation"/>
-                                            </td> 
-                                            
-                                        </tr>                                        
-                                        
+                                                                                                     
                                         <tr>
                                             <td colspan="4">
                                                 All fields are mandatory.
@@ -178,8 +159,9 @@
                                         </tr>
                                         <tr>
 
-                                            <td colspan="4" align="center">
-                                                <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" onclick="return checkform();" class="button"/>
+                                            <td colspan="4" align="center"> 
+                                                // on submit button we are calling checkform() function to validate all the entries
+                                               <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" onclick="return checkform();" class="button"/>
                                                 <input type="reset" name="btnreset" id="btnreset" value="Reset" class="button"/>
                                             </td>
                                         </tr>
