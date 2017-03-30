@@ -1,6 +1,6 @@
-<%
+<%--
 this jsp file will be downloaded by the CA which is uploaded by the user.
-%>
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.Connection"%>
